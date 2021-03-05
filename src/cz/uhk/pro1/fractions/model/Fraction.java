@@ -69,7 +69,18 @@ public class Fraction {
         return  realResult;
     }
 
+    /**
+     * Vydeli zlomek druhym zlomkem
+     * @param f2 druhy zlomek
+     * @return vysledek deleni (zkraceny)
+     * @throws RuntimeException kdyz delime nulovym zlomkem
+     */
     public Fraction div(Fraction f2) {
+        // TODO overit, abychom nedelili nulou
+        if (f2.numerator == 0)
+        {
+            throw new RuntimeException("Nelze dělit nulovým zlomkem");
+        }
         int newDenominator= this.denominator * f2.numerator;
         int newNumerator = this.numerator * f2.denominator;
         Fraction result = new Fraction(newNumerator,newDenominator).normalized();
