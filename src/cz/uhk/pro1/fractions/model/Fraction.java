@@ -19,8 +19,7 @@ public class Fraction {
     }
 
     public Fraction mult(Fraction f2) {
-        // TODO
-        return new Fraction(1,1);
+        return new Fraction(this.numerator*f2.numerator,this.denominator*f2.denominator);
     }
 
     public Fraction plus(Fraction f2) {
